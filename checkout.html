@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Receipt</title>
+    <link rel="stylesheet" href="/checkout.css">
+</head>
+<body>
+  <div class="container">
+    <div id="menu">
+      <a href="index.html">
+        <img src="images/Loo-Gao.png" alt="Loo-Gao Logo" class="logo"> </a>
+    </div>
+    <div id="food-container">
+      <div class="receipt-container"> 
+        <h1 class="receipt-title">Order Receipt</h1>
+        <p id="confirmation-message"></p> 
+        <div class="receipt-details">
+        </div>
+        <a href="index.html" class="home-button">Back to Home</a>
+
+
+    <script>
+        const cartData = JSON.parse(localStorage.getItem('cartData')) || [];
+        const paymentMethod = localStorage.getItem('paymentMethod') || 'Cash on Delivery';
+        const address = localStorage.getItem('address') || 'Not provided';
+        
+        const confirmationMessage = document.getElementById('confirmation-message');
+        const paymentMethodSpan = document.getElementById('payment-method');
+        
+
+        const orderItemsString = cartData.map(item => `• ${item.name} x ${item.quantity}`).join('<br>'); 
+
+        confirmationMessage.innerHTML = `Thank you for choosing Loo-Gao!<br> Your order are as follows:<br> ${orderItemsString} <br>your order will be delivered to your address shortly.`;
+
+        paymentMethodSpan.textContent = paymentMethod;
+
+        let totalAmount = 0;
+        cartData.forEach(item => {
+            totalAmount += item.price * item.quantity;
+        });
+        totalAmountElement.textContent = `Total: ₱${totalAmount.toFixed(2)}`; 
+    </script>
+</body>
+</html>
+
+

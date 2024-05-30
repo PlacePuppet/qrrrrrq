@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover">
+    <title>Food Website</title>
+    <link rel="stylesheet" href="/checkout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <!-- desktop view -->
+    <div class="container" id="container">
+        <div id="menu">
+            <div class="title">
+                <a href="index.html">
+                    <img src="images/Loo-Gao.png">
+                  </a>
+            </div>
+        </div>
+
+        <div id="food-container">
+            <div id="header">
+                <div class="add-box">
+                    <i class="fa fa-map-marker your-address" id="add-address"> Your Address</i>
+                </div>
+               <div class="util">
+                </div>
+            </div>
+            
+            <title>Mode of Payment</title>
+        </head>
+        <body>
+            <h2>Choose Your Mode of Payment</h2>
+            <form action="/checkout.html" method="post">
+                <label for="payment-method">Select Payment Method:</label><br><br>
+                
+                <input type="radio" id="cash" name="payment-method" value="cash">
+                <label for="cash">Cash on Delivery</label><br><br>
+                
+                <a href="checkout.html" class="button">Submit</a>
+            </form>
+        
+        </body>
+
+            <div id="cart-page" class="cart-toggle">
+                <p id="cart-title">Cart Items</p>
+                <p id="m-total-amount">Total Amout : 100</p>
+                <table>
+                    <thead>
+                        <td>Item</td>
+                        <td>Name</td>
+                        <td>Quantity</td>
+                        <td>Price</td>
+                    </thead>
+                    <tbody id="table-body">
+                        
+                    </tbody>
+                </table>
+                <div class="btn-box">
+                    <a href="checkout.html">
+                        <button class="cart-btn">Checkout</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="cart">
+            <div class="taste-header">
+                <div class="user">
+                    <a href="login.html">
+                        <i class="fa fa-user-circle" id="circle"> Account</i>
+                    </a>
+                </div>
+            </div>
+
+            <div id="checkout" class="cart-toggle">
+                <p id="total-item">Total Item : 5</p>
+                <p id="total-price"></p>
+                <p id="delievery">Free delievery on $ 40</p>
+                <a href="checkout.html">
+                    <button class="cart-btn">Checkout</button>
+                </a>
+                <script src="script.js"></script>
+            </div>
+        </div>
+    </div>
+
+
